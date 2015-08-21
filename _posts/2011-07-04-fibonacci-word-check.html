@@ -1,0 +1,29 @@
+---
+layout: post
+title: Fibonacci word check
+date: '2011-07-04T02:03:00.000+02:00'
+tags:
+- fibonacci
+- haskell
+- fibonacci word
+modified_time: '2012-07-13T00:13:00.136+02:00'
+thumbnail: http://2.bp.blogspot.com/-fbypQbiMlkE/T_9L1veyLWI/AAAAAAAAAk8/rQXNckmTZzg/s72-c/pressed+logo.png
+blogger_id: tag:blogger.com,1999:blog-6090466795079411226.post-4422397847660789999
+blogger_orig_url: http://vaultofthoughts.blogspot.com/2011/07/fibonacci-word-check.html
+---
+
+<div class="separator" style="clear: both; text-align: center;"></div>
+<div style="margin-left: 1em; margin-right: 1em;"></div>
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: left;"></div>
+<div class="separator" style="clear: both; text-align: center;"></div>
+<br />We define Fibonacci words as follows:
+<br />
+<div class="separator" style="clear: both; text-align: center;"></div>
+<div class="separator" style="clear: both; text-align: center;">
+    <a href="http://latex.codecogs.com/gif.latex?F_0%20=%20a%20\;%20F_1%20=%20b%20\;%20\text{and}%20\;%20F_{k+1}=F_{k}F_{k-1}%20\;%20\text{for}%20\;%20k%3E1" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://latex.codecogs.com/gif.latex?F_0 = a \; F_1 = b \; \text{and} \; F_{k+1}=F_{k}F_{k-1} \; \text{for} \; k&gt;1" title="F_0 = a \; F_1 = b \; \text{and} \; F_{k+1}=F_{k}F_{k-1} \; \text{for} \; k&gt;1" /></a>
+</div><span style="font-family: inherit;">Check if a given word is a Fibonacci word in linear time. I'll give it a try in Haskell.</span>
+<br />
+<br /><pre class="sh_haskell"><span style="font-family: 'Courier New', Courier, monospace;">checkFibWord :: [Char] -&gt; Bool<br />checkFibWord [] = False<br />checkFibWord xs = if (len==y) then aux xs ys else False where<br />  len = length xs<br />  (y:ys) = makeFibLenList len<br />  aux "a" [] = True<br />  aux "b" [] = True<br />  aux "ba" [1,1] = True<br />  aux zs (n1:n2:ns) =&nbsp;</span></pre><pre class="sh_haskell"><span style="font-family: 'Courier New', Courier, monospace;">    ((take n2 zs) == (drop n1 zs)) &amp;&amp; (aux (take n1 zs) (n2:ns))<br />  aux _ _ = False<br /><br />makeFibLenList :: Int -&gt; [Int]<br />makeFibLenList len = aux 1 1 [] where<br />  aux a b xs<br />    | a &gt;= len = (a:xs)<br />    | otherwise = aux b (a+b) (a:xs)<br /><br /><br />makeFibWord :: Int -&gt; [Char]<br />makeFibWord 0 = "a"<br />makeFibWord 1 = "b"<br />makeFibWord n = if (n&lt;0) then "a" else aux 2 "ba" "b" n where<br />  aux wnum w1 w0 num<br />    | (wnum==num) = w1<br />    | otherwise = aux (wnum+1) (w1++w0) w1 n</span><br /></pre><pre class="sh_haskell"><span style="font-family: 'Courier New', Courier, monospace;"><br /></span></pre>
+

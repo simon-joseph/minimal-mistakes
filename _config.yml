@@ -1,7 +1,7 @@
 # Site wide configuration
 
-title:            Site Title
-locale:           en_US
+title:            Szymon Laszczyński
+locale:           pl_PL
 url:
 
 
@@ -26,23 +26,25 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email:
+  name: Szymon Laszczyński
+  avatar: me.jpg
+  bio: |
+    Quantitative Developer <br>
+    F# Programmer
+  email: szymonlaszczynski@gmail.com
   disqus-shortname:
   twitter: #username
   facebook: #username
   google:
-    plus: #username
+    plus: szymonlaszczynski
     analytics:
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: simon-joseph
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
+  linkedin: szymonlaszczynski
   xing: #username
   instagram: #username
   lastfm: #username
@@ -56,6 +58,7 @@ owner:
   weibo: #username
   flickr: #username
   codepen: #username
+  behance: szymonlaszczynski
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

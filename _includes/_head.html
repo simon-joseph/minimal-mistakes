@@ -32,6 +32,24 @@
 	<script src="{{ site.url }}/assets/js/vendor/respond.min.js"></script>
 <![endif]-->
 
+<!-- Data Driven Documents d3js.org -->
+{% if page.d3js %}
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="{{ site.url }}/assets/js/d3js-inline.js"></script>
+{% endif %}
+
+<!-- vis.js -->
+{% if page.visjs %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.css">
+{% endif %}
+
+<!-- chart.js -->
+{% if page.chartjs %}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="{{ site.url }}/assets/js/chartjs-global-overrides.js"></script>
+{% endif %}
+
 <!-- Modernizr -->
 <script src="{{ site.url }}/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
 

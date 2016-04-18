@@ -283,6 +283,30 @@ $button-size: 1.5rem;
 	}
 }
 
+/* Display images under this class in grayscale. Disable on hover. */
+.grayscale-image-wrap {
+    img {
+      filter: gray; /* IE6-9 */
+      filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    }
+
+    /* Disable grayscale on hover */
+    img:hover {
+      filter: none;
+      -webkit-filter: grayscale(0);
+    }
+}
+
+/* display images under this class in grayscale. */
+.grayscale-no-hover-image-wrap {
+    img {
+      filter: gray; /* IE6-9 */
+      filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+      -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    }
+}
+
 /* Large feature header image */
 .image-wrap {
 	position: relative;

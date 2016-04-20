@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: Python and polish letters
 excerpt: "Things I had to do to make python work with polish letters."
 modified: 2015-12-29

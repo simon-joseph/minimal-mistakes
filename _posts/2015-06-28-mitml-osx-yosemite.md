@@ -1,5 +1,5 @@
 ---
-layout: post
+
 title: MITLM on OSX Yosemite
 excerpt: "What I had to do to build mitlm on OSX."
 modified: 2015-06-28

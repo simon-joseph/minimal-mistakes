@@ -3,8 +3,10 @@ title: Attitude - coincidence or not?
 excerpt: "... and it all started with this picture I saw."
 date: 2016-1-1
 modified: 2016-1-1
-tags: [python, fun, statistics]
-comments: true
+tags:
+    - python
+    - fun
+    - statistics
 d3js: true
 chartjs: true
 visjs: true
@@ -146,7 +148,7 @@ appendCanvas(
                 }
                 data.datasets[0].data.push(+d.Count);
             });
-            new Chart(ctx).Bar(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 
@@ -183,7 +185,7 @@ appendCanvas(
                 data.labels.push(d["Word Length"]);
                 data.datasets[0].data.push(+d.Count);
             });
-            new Chart(ctx).Bar(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 
@@ -235,7 +237,7 @@ appendCanvas(
                     data.datasets[i].data.push(+d[columns[i]]);
                 }
             });
-            new Chart(ctx).Line(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 
@@ -272,7 +274,7 @@ appendCanvas(
                 data.labels.push(d.Length);
                 data.datasets[0].data.push(+d.Count);
             });
-            new Chart(ctx).Bar(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 
@@ -324,7 +326,7 @@ appendCanvas(
                 }
             });
 
-            var chart = new Chart(ctx).Radar(data, options);
+            var chart = new Chart(ctx, { type: 'radar', data: data, options: options });
             var legend = chart.generateLegend();
             var em = holder.select("em");
             em.append("br")
@@ -371,7 +373,7 @@ appendCanvas(
                 }
                 data.datasets[0].data.push(+d.Count);
             });
-            new Chart(ctx).Bar(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 
@@ -422,7 +424,7 @@ appendCanvas(
                     data.datasets[i].data.push(+d[columns[i]]);
                 }
             });
-            new Chart(ctx).Line(data, options);
+            new Chart(ctx, { type: 'bar', data: data, options: options });
         });
     });
 </script>

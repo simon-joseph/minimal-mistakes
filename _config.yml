@@ -124,6 +124,8 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - test.sh
+  - _config.dev.yml
 keep_files:
   - .git
   - .svn

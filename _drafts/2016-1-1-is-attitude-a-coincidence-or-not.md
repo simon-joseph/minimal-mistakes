@@ -9,15 +9,8 @@ d3js: true
 chartjs: true
 visjs: true
 ---
-<section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
-<div id="drawer" markdown="1">
-*  Auto generated table of contents
-{:toc}
-</div>
-</section><!-- /#table-of-contents -->
+
+{% include toc icon="columns" title="Overview" %}
 
 ## The picture and some fun facts
 

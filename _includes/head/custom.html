@@ -2,4 +2,22 @@
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
 
+<!-- Data Driven Documents d3js.org -->
+{% if page.d3js %}
+<script src="{{ base_path }}/assets/js/vendor/d3/d3.min.js"></script>
+<script src="{{ base_path }}/assets/js/plugins/d3js-inline.js"></script>
+{% endif %}
+
+<!-- vis.js -->
+<!-- {% if page.visjs %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/vis/4.15.1/vis.min.css">
+{% endif %} -->
+
+<!-- chart.js -->
+{% if page.chartjs %}
+<script src="{{ base_path }}/assets/js/vendor/chartjs/Chart.js" charset="utf-8"></script>
+<script src="{{ base_path }}/assets/js/plugins/chartjs-global-overrides.js"></script>
+{% endif %}
+
 <!-- end custom head snippets -->

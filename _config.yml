@@ -6,12 +6,12 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "pl_PL"
+locale                   : "en-US"
 title                    : "Szymon Laszczyński"
 title_separator          : "-"
-name                     : "Szymon Laszczyński"
-description              : "Vault of thoughts"
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Szymon Laszczyński"
+description              : &description "Vault of thoughts"
+url                      : "//simon-joseph.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -28,7 +28,7 @@ comments:
     colorscheme          : # "light" (default), "dark"
 
 # SEO Related
-google_site_verification :
+google_site_verification : "MlGHTnEiBOF-TFTfAbo9BgGEmEoH6Sc4RZyqt_3NSeo"
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -50,9 +50,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-33106410-1"
 
 # Google AdSense
 google_ad_client         :
@@ -61,7 +61,7 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Szymon Laszczyński"
+  name             : *name
   avatar           : "Me.jpg"
   bio              : |
     Quantitative Developer
@@ -97,6 +97,10 @@ author:
 include:
   - .htaccess
   - _pages
+  - assets/js/vendor/d3
+  - assets/js/vendor/chartjs
+  - assets/js/plugins/d3js-inline.js
+  - assets/js/plugins/chartjs-global-overrides.js
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -151,7 +155,7 @@ kramdown:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Warsaw # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -170,6 +174,31 @@ whitelist:
   - jekyll-feed
   - jemoji
 
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+  # _collections
+  - scope:
+      path: ""
+      type: foo
+    values:
+      layout: single
 
 # Archives
 #  Type
@@ -206,16 +235,3 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true

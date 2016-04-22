@@ -62,7 +62,7 @@ google_ad_slot           :
 # Site Author
 author:
   name             : *name
-  avatar           : "me.jpg"
+  avatar           : "me.JPG"
   bio              : |
     Quantitative Developer
     F# Programmer

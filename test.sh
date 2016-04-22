@@ -1,5 +1,8 @@
 #!/bin/bash
 
+## run npn install if package.json changes
+npm run build:css
+
 # run Jekyll
 bundle exec jekyll serve --config _config.yml,_config.dev.yml --drafts
 

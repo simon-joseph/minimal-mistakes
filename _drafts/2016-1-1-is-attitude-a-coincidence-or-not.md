@@ -1,6 +1,8 @@
 ---
 title: Attitude - coincidence or not?
 excerpt: "... and it all started with this picture I saw."
+header:
+    teaser: "https://farm2.staticflickr.com/1558/23945710782_d757fa6fa7_o.jpg"
 date: 2016-1-1
 modified: 2016-1-1
 tags:

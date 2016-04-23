@@ -196,7 +196,7 @@ defaults:
   # _collections
   - scope:
       path: ""
-      type: foo
+      type: collections
     values:
       layout: single
 
